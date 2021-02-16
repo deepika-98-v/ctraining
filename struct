@@ -1,1 +1,64 @@
-c program for update emp status
+//c program for update emp status
+#include <stdio.h>
+#include <string.h>
+struct emp
+{
+  char id[10];
+  char name[20];
+};
+
+void
+main ()
+{
+  struct emp a[20];
+  int i, n, flag = 0;
+  char uid[10];char uname[i];		//int salary=20;
+  printf ("enter the num of empployees");
+  scanf ("%d", &n);
+  printf ("enter the 3 employees records");
+  for (i = 0; i < n; i++)
+    {
+      scanf ("%s\t", &a[i].id);
+      scanf ("%s", &a[i].name);
+     //scanf ("%d", &a[i].salary);
+    }
+  // scanf("%d",a[i].salary);
+  for (i = 0; i < n; i++)
+    {
+      printf ("%s\t", a[i].id);
+      printf ("%s\n", a[i].name);
+     // printf ("%d\n", a[i].salary);
+    }
+  printf ("enter the employee id to be updated");
+  scanf ("%s", uid);
+
+  for (i = 0; i < n; i++)
+
+      if (strcmp (a[i].id, uid) == 0)
+	{
+	  flag = 1;
+	  printf ("enter the new id and name");
+	  scanf ("%s", uid);
+	  scanf ("%s", uname);
+
+	  strcpy (a[i].id,uid);
+	  strcpy (a[i].name,uname);
+	  break;
+	}
+  {
+      if(flag == 1)
+    {
+      printf ("employee updated");
+    }
+  else{
+    printf("employee not found");
+}
+}
+{
+for(i=0;i<n;i++)
+  {
+    printf("%s\t",a[i].id);
+    printf("%s\n",a[i].name);
+  }
+}
+}
